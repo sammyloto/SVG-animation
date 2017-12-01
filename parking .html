@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parking</title>
+        <script type="text/javascript">
+           //alert(" By: Samuel Gacho \n Regno: 1027876");
+        </script>
+    </head>
+<body>
+<svg width="800" height="500">
+    <circle id="circle1" cx="20" cy="20" r="10"
+    style="stroke: none; fill: #ff0000;"/>
+
+    <circle id="circle2" cx="40" cy="20" r="10"
+    style="stroke: none; fill: #FF4800;"/>
+
+    <circle id="circle3" cx="60" cy="20" r="10"
+    style="stroke: none; fill: #FFFB00;"/>
+
+    <circle id="circle4" cx="80" cy="20" r="10"
+    style="stroke: none; fill: #7BFF00;"/>
+
+    <circle id="circle5" cx="100" cy="20" r="10"
+    style="stroke: none; fill: #00FFBF;"/>
+
+    <circle id="circle6" cx="120" cy="20" r="10"
+    style="stroke: none; fill: #2600FF;"/>
+
+    <circle id="circle7" cx="140" cy="20" r="10"
+    style="stroke: none; fill: #A200FF;"/>
+
+    <circle id="circle8" cx="160" cy="20" r="10"
+    style="stroke: none; fill: #FF008C;"/>
+
+    <circle id="circle9" cx="180" cy="20" r="10"
+    style="stroke: none; fill: #09470E;"/>
+
+    <circle id="circle10" cx="200" cy="20" r="10"
+    style="stroke: none; fill: #0A3042;"/>
+    
+    <rect x="30" y="30" height="100" width"100"
+     style="fill: #000000; stroke-width:10;
+     stroke:#000000"/>
+</svg>
+
+    <script>
+    var timerFunction = null;
+    function startAnimation() {
+    if(timerFunction == null) {
+    timerFunction = setInterval(animate, 20);
+    }
+    }
+    function stopAnimation() {
+    if(timerFunction != null){
+    clearInterval(timerFunction);
+    timerFunction = null;
+    }
+    }
+    function animate() {
+    var circle = document.getElementById("circle1");
+    var x = circle.getAttribute("cx");
+    var newX = 2 + parseInt(x);
+    if(newX > 500) {
+    newX = 20;
+    }
+    circle.setAttribute("cx", newX);
+    
+    21
+    
+    }
+    </script>
+    <br/>
+    <input type="button" value="Park" onclick="startAnimation();">
+    <input type="button" value="Unpark" onclick="stopAnimation();">
+</body>
+</html>
